@@ -1,6 +1,4 @@
 #captcha code using python
-
-
 from tkinter import *
 import tkinter.messagebox
 from captcha.image import ImageCaptcha
@@ -22,7 +20,6 @@ def generate_captcha():
         
     global image_captcha
     image_captcha=s
-        
     return s
     
 def generate_digit_captcha():
@@ -34,9 +31,8 @@ def generate_digit_captcha():
         
     global audio_captcha
     audio_captcha=s
-        
+       
     return s1
-
 
 def generate_image_captcha():
     os.startfile('c1.png')
@@ -89,7 +85,6 @@ def get_audio():
 def get_image():
     return image_captcha
 
-
 def check_audio_captcha():
     #answer = input("\nEnter Value : ")
     if ans.get() == get_audio():
@@ -108,7 +103,6 @@ def check_image_captcha():
     else:
         tkinter.messagebox.showinfo("WRONG!","Captcha Code does not Matched.")
         ans1.set("")
-        
         
 root = Tk()
 root.title("GUI : CAPTCHA Generation")
@@ -133,10 +127,6 @@ LeftFrame.pack(side=LEFT)
 
 RightFrame  =  Frame(MainFrame ,bd=10, width =200, height=200, padx=10,pady=2,bg='#68DEED',relief=RIDGE)
 RightFrame.pack(side=RIGHT)
-
-
-
-
 
 Label_1 =Label(RightFrame, font=('lato black', 33,'bold'), text=" Audio Captcha ",padx=2,pady=2, bg="yellow",fg ="black")
 Label_1.grid(row=0, column=0,sticky=W)
@@ -167,10 +157,6 @@ Label_4.grid(row=10, column=0)
 
 Label_7 =Label(RightFrame, font=('arial', 20,'bold'), text="      ",padx=2,pady=2, bg="#68DEED",fg = "black")
 Label_7.grid(row=11, column=1,sticky=W)
-
-
-
-
 
 Label_1 =Label(LeftFrame, font=('lato black', 33,'bold'), text=" Text Captcha ",padx=2,pady=2, bg="yellow",fg ="black")
 Label_1.grid(row=0, column=0,sticky=W)
@@ -203,4 +189,3 @@ Label_7 =Label(LeftFrame, font=('arial', 20,'bold'), text="      ",padx=2,pady=2
 Label_7.grid(row=11, column=1,sticky=W)
 
 root.mainloop()
-
